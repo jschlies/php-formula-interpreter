@@ -23,7 +23,7 @@ class CompositeParser implements ParserInterface {
     function parse($expression) {
         foreach ($this->parsers as $parser) {
             try {
-                return $parser->parse($expression);
+                return $parser->parse(trim($expression));
             } catch (ParserException $e) {
                 if ($e->getExpression() != trim($expression)) {
                     throw $e;
