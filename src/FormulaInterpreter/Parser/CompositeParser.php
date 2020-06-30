@@ -36,5 +36,3 @@ class CompositeParser implements ParserInterface {
 
 
 }
-
-?>
